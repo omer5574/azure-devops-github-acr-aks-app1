@@ -47,9 +47,8 @@ stages:
   jobs:
   - deployment: Deploy
     displayName: Deploy
-    pool:
-      vmImage: $(vmImageName)
-    environment: 'stacksimplifyazuredevopsgithubacraksapp1.default'
+    pool:akspool
+    environment: 'omer5574azuredevopsgithubacraksapp1.default'
     strategy:
       runOnce:
         deploy:
