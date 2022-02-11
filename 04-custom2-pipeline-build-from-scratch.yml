@@ -19,13 +19,12 @@ stages:
   jobs:
   - job: Build
     displayName: Build Job
-    pool: 
-      vmImage: 'ubuntu-latest'
+    pool: akspool
     steps:   
     # Task-1: Build Docker Image and push to Azure Container Registry ACR
     - task: Docker@2
       inputs:
-        containerRegistry: 'manual-aksdevopsacr-svc'
+        containerRegistry: 'manual-omeracraks-svc'
         repository: 'custom2aksnginxapp1'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
